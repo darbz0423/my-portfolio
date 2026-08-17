@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-
 import Home from "@/pages/Home/Home";
 import About from "@/pages/About/About";
 import Projects from "@/pages/Projects/Projects";
@@ -18,39 +16,18 @@ function App() {
   });
 
   useEffect(() => {
-    document.documentElement.classList.toggle(
-      "dark",
-      darkMode
-    );
+    document.documentElement.classList.toggle("dark", darkMode);
 
     try {
-      localStorage.setItem(
-        "theme",
-        darkMode ? "dark" : "light"
-      );
-    } catch {
-      // Storage may not be available in some browsers.
-    }
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    } catch {}
   }, [darkMode]);
 
-  const toggleTheme = () => {
-    setDarkMode((current) => !current);
-  };
-
   return (
-    <div
-      className="
-        min-h-screen
-        overflow-x-hidden
-        bg-[var(--background)]
-        text-[var(--text)]
-        transition-colors
-        duration-300
-      "
-    >
+    <div className="min-h-screen overflow-x-hidden bg-[var(--background)] text-[var(--text)] transition-colors duration-300">
       <Navbar
         darkMode={darkMode}
-        toggleTheme={toggleTheme}
+        toggleTheme={() => setDarkMode((value) => !value)}
       />
 
       <main>
