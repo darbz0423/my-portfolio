@@ -1,0 +1,13 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+section {
+  scroll-margin-top: 110px;
+}
