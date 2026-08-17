@@ -20,7 +20,7 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/darbz0423/myportfolio",
   },
-  {
+  /* {
     title: "Electricity Bill Calculator",
     category: "Frontend",
     description: "A small project that calculates electricity usage and gives an estimated bill based on the input.",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     category: "Database",
     description: "A database project I worked on to practice organizing information, writing queries, and managing records.",
     technologies: ["SQL", "MySQL"],
-  },
+  }, */
 ];
 
 const filters = ["All", "Frontend", "Application", "Database"];
